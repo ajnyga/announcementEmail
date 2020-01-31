@@ -60,7 +60,11 @@ class AnnouncementEmailPlugin extends GenericPlugin {
 			$announcementId = $notification->getAssocId();
 			$announcementDao = DAORegistry::getDAO('AnnouncementDAO');
 			$announcement = $announcementDao->getById($announcementId);
-			if ($announcement) $message = $announcement->getLocalizedTitle() . "<br /><br />" . $announcement->getLocalizedDescriptionShort();
+			if ($announcement) {
+				$templateMgr = TemplateManager::getManager();
+				$templateMgr->assign('announcement', $announcement);
+				$message = $templateMgr->fetch($this->getTemplateResource('notification/announcementEmail.tpl'));
+			}
 		}
 	}
 }
