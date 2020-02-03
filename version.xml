@@ -11,10 +11,10 @@
   * Plugin version information.
   -->
 <version>
-  <application>announcementEmail</application>
-  <type>plugins.generic</type>
-  <release>1.1.1.0</release>
-  <date>2020-01-31</date>
-  <lazy-load>1</lazy-load>
-  <class>AnnouncementEmailPlugin</class>
+	<application>announcementEmail</application>
+	<type>plugins.generic</type>
+	<release>1.1.1.0</release>
+	<date>2020-01-31</date>
+	<lazy-load>1</lazy-load>
+	<class>AnnouncementEmailPlugin</class>
 </version>
